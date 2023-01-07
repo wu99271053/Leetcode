@@ -60,3 +60,27 @@ class Solution58:
             length+=1
             i-=1
         return length
+
+
+#leetcode 1 twosum
+class Solution1:
+    def twosum(self,nums:List[int],target:int)->bool:
+        emptyhash={}
+        for i,n in nums:
+            diff=target-n
+            if diff in emptyhash:
+                return [emptyhash[diff],i]
+            emptyhash[n]=i
+            return 
+
+
+#leetcode 14 longest common prefix
+class Solution14:
+    def longestcommonprefix(self,strs:List[str])->bool:
+        res=""
+        for i in range(len(strs[0])):
+            for j in strs:
+                if i==len(strs[j]) or strs[0][i]!=j[i]:
+                    return res
+            res+=str[0][i]
+        return res
