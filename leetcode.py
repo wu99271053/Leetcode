@@ -37,3 +37,26 @@ class Solution1299:
             arr[i]=rightMax
             rightMax=newmax
         return arr
+
+
+#leetcode 392 is subsequence
+class Solution392():
+    def issubsequence(self, s:str,l:str)->bool:
+        i,j=0,0
+        while i<len(s) and j<len(l):
+            if s[i]==l[j]:
+                i+=1
+            j+=1
+        return i==len(s)
+
+
+#leetcode 58 length of last word
+class Solution58:
+    def lenghoflastword(self,s:str):
+        i,length=len(s)-1,0
+        while s[i]==" ":
+            i-=1
+        while i>=0 and s[i]!=" ":
+            length+=1
+            i-=1
+        return length
